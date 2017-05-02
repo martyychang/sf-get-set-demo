@@ -22,16 +22,14 @@ public with sharing class LonghandExample {
      * When returning the funny, make sure it's clear by adding the
      * qualifier "funny__" to the front of the funny text.
      */
+    @AuraEnabled
     public String getFunny() {
         return 'funny__' + this.funny;
     }
 
+    @AuraEnabled
     public String getName() {
         return this.name;
-    }
-
-    public void setName(String value) {
-        this.name = value;
     }
 
     /**
@@ -40,5 +38,9 @@ public with sharing class LonghandExample {
      */
     public void setFunny(String value) {
         this.funny = value + '__funny';
+    }
+
+    public void setName(String value) {
+        this.name = value;
     }
 }
