@@ -1,0 +1,12 @@
+<apex:page controller="GetterSetterDemoController"
+           showHeader="true" sidebar="true">
+    <p>
+        You can see that whether you explicitly define getters longhand
+        or use the shorthand <code>{ get; set; }</code> syntax,
+        the properties are accessed the same way in Visualforce.
+        <apex:outputText value="{!longhand.name}"/>
+        <apex:outputText value="{!longhand.funny}"/>
+        <apex:outputText value="{!shorthand.name}"/>
+        <apex:outputText value="{!shorthand.funny}"/>
+    </p>
+</apex:page>
